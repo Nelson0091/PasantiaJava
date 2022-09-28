@@ -1,0 +1,20 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+    main:
+      allow-bean-definition-overriding: true
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: true
+  datasource:
+    driver-class: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/agenciabd?currentSchema=public
+    username: postgres
+    password: root
+  InitializationFailTimeout: -1
+  hikari:
+    maximum-pool-size: 5
+    connetion-timeout: 2000
